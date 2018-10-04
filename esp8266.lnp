@@ -1,0 +1,26 @@
+--cpu Cortex-M4.fp
+".\startup.o"
+".\main.o"
+".\pll.o"
+".\esp8266.o"
+".\uart.o"
+".\list.o"
+".\queue.o"
+".\tasks.o"
+".\heap_1.o"
+".\port.o"
+".\adc.o"
+".\timers.o"
+".\mqttconnectclient.o"
+".\mqttconnectserver.o"
+".\mqttdeserializepublish.o"
+".\mqttformat.o"
+".\mqttpacket.o"
+".\mqttserializepublish.o"
+".\mqttsubscribeclient.o"
+".\mqttsubscribeserver.o"
+".\mqttunsubscribeclient.o"
+".\mqttunsubscribeserver.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\esp8266.map" -o .\esp8266.axf
